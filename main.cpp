@@ -1,14 +1,28 @@
-#include <stdio.h>
+#include <cstdio>
+int main (){
 
-int main () {
-    int number;
-    float average;
-    int number2;
-    number = 20;
-    number2 = 30;
-    printf("the value of number is: %d", number);
-    printf("\nthe value of number2 is: %d", number2);
-    average = (number + number2)/2;
-    printf ("\nthevalue of average is: %f", average);
+    int score;
+    printf( "Enter your score: ");
+    scanf( "%d", &score);
+
+    char grade;
+    if(score >= 70){
+        grade = 'A';
+    } else if (score >= 60){
+        grade = 'B';
+    } else if (score >= 50){
+        grade = 'C';
+    } else if (score >= 40){
+        grade = 'D';
+    } else if (score <= 30){
+        grade = 'E';
+    } else {
+        grade = 'F';
+    }
+
+
+printf( "Grade for students :%c\n", grade);
+
     return 0;
+
 }
